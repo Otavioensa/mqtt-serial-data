@@ -1,0 +1,23 @@
+{
+  "name": "mqtt-serial-data",
+  "version": "1.0.0",
+  "description": "An application which reads data from serial port and sends it to a MQTT broker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Otavioensa/mqtt-serial-data.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Otavioensa/mqtt-serial-data/issues"
+  },
+  "homepage": "https://github.com/Otavioensa/mqtt-serial-data#readme",
+  "dependencies": {
+    "dotenv": "^6.1.0",
+    "serialport": "^7.0.2"
+  }
+}
