@@ -1,3 +1,4 @@
+require('dotenv').config()
 
 const SerialPort = require('serialport')
 const mqtt = require('mqtt')
