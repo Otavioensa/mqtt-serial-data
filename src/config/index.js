@@ -1,13 +1,13 @@
 const {
   TOPIC,
   BROKER,
-  PORTSRC
+  PORTSRC,
 } = process.env
 
 const config = {
   topic: TOPIC || 'my-mqtt-topic',
   broker: BROKER || 'mqtt://test.mosquitto.org',
-  portSrc: PORTSRC
+  portSrc: PORTSRC,
 }
 
 module.exports = config
