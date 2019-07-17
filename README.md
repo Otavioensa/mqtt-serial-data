@@ -6,7 +6,7 @@ An application that reads data from serial port and sends it to a MQTT broker.
 
 1) Clone this repository
 2) Check the serial port where data will be read (run `ls /dev/tty*` and check the port you want to read data from)
-3) Create a .env file inside **src** folder. You might use the .env.example file as a sample
+3) Create a .env file inside the root folder. You might use the .env.example file as a sample
 4) Replace the env variables with serial port previously checked on step **2**, broker and topic values
 
 ## Purpose
