@@ -7,10 +7,7 @@ const publishOptions = { qos: 1 }
 
 const mqttClient = mqtt.connect(broker)
 
-const onPublish = () => {
-  console.log('A message has been sent!')
-  mqttClient.end()
-}
+const onPublish = () => console.log('A message has been sent!')
 
 const onSerialData = (data) => {
   console.log(data)
