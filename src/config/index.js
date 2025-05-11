@@ -5,9 +5,9 @@ const {
 } = process.env
 
 const config = {
-  topic: TOPIC || 'my-mqtt-topic',
-  broker: BROKER || 'mqtt://test.mosquitto.org',
-  portSrc: PORTSRC,
+  topic: TOPIC || 'speakers-program/sensor/pir',
+  broker: BROKER || 'mqtt://broker.hivemq.com',
+  portSrc: PORTSRC || '/dev/tty.usbserial-AH03B7R1',
 }
 
 module.exports = config

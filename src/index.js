@@ -5,18 +5,18 @@ const { setSerialListener } = require('./serial')
 const { broker, topic } = require('./config')
 const publishOptions = { qos: 1 }
 
-const mqttClient = mqtt.connect(broker)
+let mqttClient
 
-const onPublish = () => console.log('A message has been sent!')
-
-const onSerialData = (data) => {
+async function onSerialData(data) {
   console.log(data)
-  mqttClient.publish(topic, data, publishOptions, onPublish)
+  await mqttClient.publishAsync(topic, data, publishOptions)
+  console.log('A message has been sent!')
 }
 
-const onBrokerConnection = () => {
+async function start() {
+  mqttClient = await mqtt.connectAsync(broker)
   console.log('connected')
   setSerialListener(onSerialData)
 }
 
-mqttClient.on('connect', onBrokerConnection)
+start()

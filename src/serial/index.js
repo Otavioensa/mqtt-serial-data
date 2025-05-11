@@ -1,9 +1,9 @@
-const SerialPort = require('serialport')
+const { SerialPort, ReadlineParser } = require('serialport')
 const { portSrc } = require('../config')
 
-const Readline = SerialPort.parsers.Readline
-const port = new SerialPort(portSrc)
-const parser = new Readline()
+
+const port = new SerialPort({ path: portSrc, baudRate: 9600 })
+const parser = new ReadlineParser()
 
 const setSerialListener = (onSerialData) => {
   port.pipe(parser)
